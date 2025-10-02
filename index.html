@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Directory | Modern API Display</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>User Directory</h1>
+            <p class="subtitle">Explore our community members with detailed profiles fetched in real-time from JSONPlaceholder API</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="totalUsers">0</div>
+                <div class="stat-label">Total Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="uniqueCities">0</div>
+                <div class="stat-label">Cities</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="companies">0</div>
+                <div class="stat-label">Companies</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="reloadBtn">
+                <i class="fas fa-sync-alt"></i> Reload Data
+            </button>
+            <button class="btn" id="viewToggle">
+                <i class="fas fa-th"></i> Grid View
+            </button>
+            <button class="btn" id="sortBtn">
+                <i class="fas fa-sort-alpha-down"></i> Sort by Name
+            </button>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search users by name, email, or city...">
+            </div>
+        </div>
+
+        <div id="content">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading user data...</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Data provided by <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a> | Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> by <a href="https://www.linkedin.com/in/jatin-yadav-34b812258/">Jatin Yadav</a></p>
+        </footer>
+    </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
